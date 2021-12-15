@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <h:head>
+        <title>Student Details</title>
+    </h:head>
+    <h:body>
+    	<h2>Student Details</h2>
+    	<h3>Firstname : #{student.firstName}</h3>
+    	<h3>Lastname : #{student.lastName}</h3>
+    	<h3>Country : #{student.country}</h3>
+    	<h3>Gender : #{student.gender}</h3>
+    	<h3>Languages:</h3>
+    		<ul>
+    			<ui:repeat value="#{student.languages}" var="lang">
+    				<li> #{lang} </li>
+    			</ui:repeat>
+    		</ul>
+    	
+    	
+    </h:body>
+</html>

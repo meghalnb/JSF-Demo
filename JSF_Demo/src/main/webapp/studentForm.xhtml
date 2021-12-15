@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+        <title>Student Form</title>
+        <style>
+        	.error{
+        		color: red
+        	}
+        </style>
+    </h:head>
+    <h:body>
+    	<h2>Student Form</h2>
+    	<h:form>
+    		
+    	
+    		Firstname
+    	   <h:inputText id="first_Name" value="#{student.firstName}" required="true"
+    	   requiredMessage="firstname is mandatory"></h:inputText>
+			<!-- <h:messages for="first_Name" styleClass="error" />
+			 -->
+			
+    	   <br/><br/>
+    	   Lastname
+    	   <h:inputText id="lastName" value="#{student.lastName}"></h:inputText>
+    	   <br/><br/>
+    	   
+    	   Country:
+    	   <h:selectOneMenu value="#{student.country}" >
+    	   		<f:selectItem itemValue="India" itemLabel="India" />
+    	   		<f:selectItem itemValue="Brazil" itemLabel="Brazil" />
+    	   		<f:selectItem itemValue="France" itemLabel="France" />
+    	   		<f:selectItem itemValue="Germany" itemLabel="Germany" />
+    	   		<f:selectItem itemValue="United States" itemLabel="United States" />
+    	   		<f:selectItem itemValue="United Kingdom" itemLabel="United Kingdom" />
+    	   </h:selectOneMenu>
+    	   
+    	   <br/><br/>
+    	   Gender:
+    	   <h:selectOneMenu value="#{student.gender}">
+    	   		<f:selectItem itemValue="Male" itemLabel="Male" />
+    	   		<f:selectItem itemValue="Female" itemLabel="Female" />
+    	   </h:selectOneMenu>
+    	   
+    	   <br/><br/>
+    	   Languages:
+    	   <h:selectManyCheckbox value="#{student.languages}">
+    	   		<f:selectItem itemValue="Java" itemLabel="Java" />
+    	   		<f:selectItem itemValue="Phython" itemLabel="Phython" />
+    	   		<f:selectItem itemValue="C#" itemLabel="C#" />
+    	   		<f:selectItem itemValue=".Net" itemLabel=".Net" />
+    	   </h:selectManyCheckbox>
+    	   
+    	   <br/><br/>
+    	   <h:commandButton value="Submit" action="displayStudentDetails"></h:commandButton>
+    	</h:form>
+    </h:body>
+</html>
